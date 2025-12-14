@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Google_Gemini_logo.svg/1024px-Google_Gemini_logo.svg.png" />
+    <!-- Self-contained SVG Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✅</text></svg>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#f0f4f8" />
     <title>HabitFlow</title>
@@ -15,7 +16,7 @@
       }
       body {
         font-family: 'Roboto', sans-serif;
-        background-color: #1e1e1e; /* Dark background for desktop wrapper */
+        background-color: #1e1e1e;
         margin: 0;
         padding: 0;
         display: flex;
@@ -25,15 +26,14 @@
       }
       #root {
         width: 100%;
-        max-width: 480px; /* Mobile width constraint */
+        max-width: 480px;
         height: 100%;
-        background-color: #f0f4f8; /* App background (Surface Container) */
+        background-color: #f0f4f8;
         position: relative;
         display: flex;
         flex-direction: column;
         box-shadow: 0 0 20px rgba(0,0,0,0.5);
       }
-      /* Hide scrollbar */
       .no-scrollbar::-webkit-scrollbar {
         display: none;
       }
@@ -42,20 +42,22 @@
         scrollbar-width: none;
       }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
-    "date-fns": "https://esm.sh/date-fns@^4.1.0"
-  }
-}
-</script>
-</head>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+        "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+        "date-fns": "https://esm.sh/date-fns@^4.1.0"
+      }
+    }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
+    <!-- Entry point script is required for the app to load -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
